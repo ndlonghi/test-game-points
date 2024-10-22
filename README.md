@@ -1,3 +1,7 @@
+This is a test project built with React.js featuring a list of items you can collect and review your score.
+
+The main idea was to keep it as simple as possible without solving ahead of time problems that don't exist yet; but still trying to showcase some abilities in organizing a code base that could be easy to read, understand and possibly scale.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
