@@ -2,6 +2,8 @@ import { createContext, useCallback, useContext, useMemo, useState } from "react
 
 import { Item } from "src/types";
 
+import { getPlayerItemPoints } from "./getPlayerItemPoints";
+
 type PlayerItems = Record<Item["name"], { item: Item; amount: number }>;
 
 const PlayerItemsContext = createContext<
@@ -70,15 +72,14 @@ export function usePlayerItems(): UsePlayerItemsResponse {
         return { bonusPoints, totalPoints: totalPoints + item.points * amount };
       }
 
-      const bonusCount = Math.floor(amount / item.bonus.amount);
-      const looseItemsCount = amount % item.bonus.amount;
-
-      const pointsFromBonuses = bonusCount * item.bonus.points;
+      const pointsWithBonuses = getPlayerItemPoints(item, amount);
+      const { bonus, ...itemWithoutBonus } = item;
+      const pointsWithoutBonuses = getPlayerItemPoints(itemWithoutBonus, amount);
 
       return {
         // Bonus points is the points from all bonuses minus what we would get without the bonus
-        bonusPoints: bonusPoints + pointsFromBonuses - bonusCount * item.bonus.amount * item.points,
-        totalPoints: totalPoints + pointsFromBonuses + looseItemsCount * item.points
+        bonusPoints: bonusPoints + pointsWithBonuses - pointsWithoutBonuses,
+        totalPoints: totalPoints + pointsWithBonuses
       };
     }, { bonusPoints: 0, totalPoints: 0 }),
     [context.items]

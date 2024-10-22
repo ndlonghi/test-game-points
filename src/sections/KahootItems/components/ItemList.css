@@ -1,0 +1,15 @@
+.ItemList {
+  flex: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
+  gap: 1em;
+}
+
+.ItemList-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4em;
+}

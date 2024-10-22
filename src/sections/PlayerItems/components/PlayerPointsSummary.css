@@ -1,0 +1,38 @@
+.PlayerPointsSummary {
+  display: flex;
+  flex-direction: column;
+}
+
+.PlayerPointsSummary-section {
+  background-color: var(--primary-color);
+  padding: 1em;
+  border-top: thin solid var(--secondary-color);
+  color: var(--primary-text-color);
+}
+
+.PlayerPointsSummary-total-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.PlayerPointsSummary-points-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PlayerPointsSummary-total-label {
+  font-size: 1em;
+}
+
+.PlayerPointsSummary-points {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.PlayerPointsSummary-bonuses {
+  font-size: 1.2em;
+}

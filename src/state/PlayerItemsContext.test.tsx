@@ -1,38 +1,9 @@
 import { act } from "react";
 import { renderHook } from "@testing-library/react";
 
-import { PlayerItemsProvider, usePlayerItems } from "./PlayerItemsContext";
+import { mockItems } from "src/__mocks__/itemMocks";
 
-const mockItems = [
-  {
-    name: "A",
-    points: 50,
-    bonus: {
-      amount: 3,
-      points: 200,
-    },
-  },
-  {
-    name: "B",
-    points: 30,
-    bonus: {
-      amount: 2,
-      points: 90,
-    },
-  },
-  {
-    name: "C",
-    points: 20,
-  },
-  {
-    name: "D",
-    points: 15,
-  },
-  {
-    name: "E",
-    points: 0,
-  },
-];
+import { PlayerItemsProvider, usePlayerItems } from "./PlayerItemsContext";
 
 const wrapper = ({ children }: { children: React.ReactNode }) => (
   <PlayerItemsProvider>{children}</PlayerItemsProvider>

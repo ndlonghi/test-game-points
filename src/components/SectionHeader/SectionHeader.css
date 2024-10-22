@@ -1,0 +1,9 @@
+.SectionHeader {
+  background-color: var(--primary-color);
+  padding: .5em 1em;
+  font-size: 2em;
+  color: var(--primary-text-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: start;
+}

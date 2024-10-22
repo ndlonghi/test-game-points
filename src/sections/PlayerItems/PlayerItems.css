@@ -1,0 +1,7 @@
+.PlayerItems {
+  min-width: 30%;
+  height: 100%;
+  border: 1pt solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}

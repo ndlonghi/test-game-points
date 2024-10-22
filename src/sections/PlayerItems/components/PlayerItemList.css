@@ -1,0 +1,32 @@
+.PlayerItemList {
+  flex: 1;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.PlayerItemList-divider {
+  border-bottom: thin solid var(--secondary-color);
+}
+
+.PlayerItemList-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .5em 1em;
+  border-bottom-width: 2px;
+}
+
+.PlayerItemList-header-label {
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.PlayerItemList-container {
+  flex: 1;
+  overflow-y: scroll;
+  overscroll-behavior-y: auto;
+  margin: 0;
+  padding: 0;
+}

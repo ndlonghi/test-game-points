@@ -1,0 +1,14 @@
+.GameItem {
+  padding: 1em;
+  width: 200px;
+  height: 200px;
+  border: thin solid var(--secondary-color);
+  font-size: 3em;
+  text-align: center;
+}
+
+.GameItem-small {
+  padding: .2em;
+  width: 56px;
+  height: 56px;
+}
